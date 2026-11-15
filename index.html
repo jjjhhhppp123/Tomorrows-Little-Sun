@@ -27,8 +27,8 @@
       position: relative;
     }
 
-    /* 背景淡色系繽紛實線裝飾 (100% 無漸層) */
-    .bg-decor {
+    /* 筆記本正方格狀底圖風格 (100% 純色實線 SVG Pattern，無漸層) */
+    .bg-notebook-grid {
       position: fixed;
       inset: 0;
       pointer-events: none;
@@ -605,6 +605,8 @@
 
     /* 頁尾 */
     .footer {
+      position: relative;
+      z-index: 10;
       border-top: 2px solid #F5E6C8;
       background-color: #FFFDF9;
       padding: 24px 20px;
@@ -793,16 +795,21 @@
 </head>
 <body>
 
-  <!-- 背景淡色系繽紛實線裝飾 (無漸層) -->
-  <div class="bg-decor" aria-hidden="true">
-    <svg width="100%" height="100%" viewBox="0 0 1440 900" preserveAspectRatio="none">
-      <path d="M-100,150 C320,70 640,230 1060,130 C1260,80 1380,150 1540,120" fill="none" stroke="#F8C8DC" stroke-width="2" />
-      <path d="M-100,175 C320,95 640,255 1060,155 C1260,105 1380,175 1540,145" fill="none" stroke="#B8E0F7" stroke-width="1.5" />
-      <path d="M-100,480 C260,560 720,380 1140,490 C1320,535 1420,460 1540,485" fill="none" stroke="#BCEAD5" stroke-width="2" />
-      <path d="M-100,505 C260,585 720,405 1140,515 C1320,560 1420,485 1540,510" fill="none" stroke="#FFE099" stroke-width="1.5" />
-      <path d="M-100,790 C380,710 820,850 1220,750 C1360,715 1440,760 1540,740" fill="none" stroke="#DCD3F7" stroke-width="2" />
-      <circle cx="1280" cy="240" r="68" fill="none" stroke="#BCEAD5" stroke-width="1.5" />
-      <circle cx="140" cy="640" r="52" fill="none" stroke="#F8C8DC" stroke-width="1.5" />
+  <!-- 筆記本正方格狀底圖風格 (移除原本的曲線與圓圈，改為純色正方格紋) -->
+  <div class="bg-notebook-grid" aria-hidden="true">
+    <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- 24px 細方格 -->
+        <pattern id="notebook-small-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+          <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#F3E5AB" stroke-width="1" />
+        </pattern>
+        <!-- 120px 主方格 (每 5x5 小格構成一個大格，如同日系方格筆記本) -->
+        <pattern id="notebook-major-grid" width="120" height="120" patternUnits="userSpaceOnUse">
+          <rect width="120" height="120" fill="url(#notebook-small-grid)" />
+          <path d="M 120 0 L 0 0 0 120" fill="none" stroke="#E8D292" stroke-width="1.5" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#notebook-major-grid)" />
     </svg>
   </div>
 
@@ -846,7 +853,7 @@
 
   <main class="main-container">
 
-    <!-- 1. 頂部橫幅背景圖片區 (自動由 wallpapers.json 載入 Google Drive 圖片) -->
+    <!-- 1. 頂部橫幅背景圖片區 -->
     <section class="banner-frame">
       <div class="banner-inner">
         <img id="img-banner" class="banner-img" alt="明日的小太陽 頻道橫幅背景" referrerpolicy="no-referrer" />
@@ -1011,7 +1018,6 @@
     var currentSearch = '';
     var siteData = null;
 
-    /* 預設內建與 wallpapers.json 同步的設定 (若單檔開啟也能正常顯示，部署至 GitHub 時會優先讀取外部 wallpapers.json) */
     var FALLBACK_JSON = {
       banner: {
         url: "https://drive.google.com/file/d/1Fj2c_0abPhDmAeZdoA8e7MFqXuilzG7D/view?usp=sharing"
@@ -1167,7 +1173,6 @@
       }
     };
 
-    /* 自動解析 Google Drive 分享網址中的檔案 ID */
     function extractDriveId(url) {
       if (!url) return null;
       var match = url.match(/\/file\/d\/([a-zA-Z0-9_-]+)/);
@@ -1177,7 +1182,6 @@
       return null;
     }
 
-    /* 將 Google Drive 分享連結轉為可直接顯示的圖片網址 */
     function toPreviewUrl(url) {
       var id = extractDriveId(url);
       if (id) {
@@ -1186,7 +1190,6 @@
       return url;
     }
 
-    /* 將 Google Drive 分享連結轉為一鍵下載網址 */
     function toDownloadUrl(url) {
       var id = extractDriveId(url);
       if (id) {
@@ -1195,7 +1198,6 @@
       return url;
     }
 
-    /* 即時日期與時間計數器更新 */
     function updateClock() {
       var now = new Date();
       var yyyy = now.getFullYear();
@@ -1213,7 +1215,6 @@
       document.getElementById('clock-ss').textContent = ss;
     }
 
-    /* 載入外部 wallpapers.json */
     function loadConfig() {
       fetch('./wallpapers.json')
         .then(function(res) {
