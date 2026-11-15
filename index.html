@@ -1,9 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="ja">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>明日的小太陽 - 桌布下載官網</title>
+  <title>明日の太陽ちゃん - 公式壁紙ダウンロード</title>
+  <!-- 瀏覽器分頁黃色太陽圖形圖標 (SVG Favicon) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='16' fill='%23FFB84D'/%3E%3Cg stroke='%23FFB84D' stroke-width='5' stroke-linecap='round'%3E%3Cline x1='32' y1='5' x2='32' y2='11'/%3E%3Cline x1='32' y1='53' x2='32' y2='59'/%3E%3Cline x1='5' y1='32' x2='11' y2='32'/%3E%3Cline x1='53' y1='32' x2='59' y2='32'/%3E%3Cline x1='12.9' y1='12.9' x2='17.1' y2='17.1'/%3E%3Cline x1='46.9' y1='46.9' x2='51.1' y2='51.1'/%3E%3Cline x1='51.1' y1='12.9' x2='46.9' y2='17.1'/%3E%3Cline x1='17.1' y1='46.9' x2='12.9' y2='51.1'/%3E%3C/g%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -805,7 +807,7 @@
     </svg>
   </div>
 
-  <!-- 頂部極簡導覽列 -->
+  <!-- 頂部極簡導覽列 (預設日文) -->
   <header class="topbar">
     <div class="topbar-inner">
       <a href="#" class="brand-link">
@@ -818,18 +820,18 @@
             <circle cx="20" cy="4.5" r="3.5" fill="#FFB84D" />
           </g>
         </svg>
-        <span id="nav-brand-title">明日的小太陽</span>
+        <span id="nav-brand-title">明日の太陽ちゃん</span>
       </a>
 
       <div class="nav-right">
         <nav class="nav-links">
-          <a href="#license-section" id="nav-link-license">授權與版權</a>
-          <a href="#gallery-section" id="nav-link-wallpapers">版權桌布下載</a>
+          <a href="#license-section" id="nav-link-license">著作権・利用規約</a>
+          <a href="#gallery-section" id="nav-link-wallpapers">壁紙ダウンロード</a>
         </nav>
 
         <div class="lang-switch" role="group" aria-label="Language Switcher">
-          <button type="button" onclick="setLanguage('jp')" id="btn-lang-jp" class="lang-btn">JP</button>
-          <button type="button" onclick="setLanguage('tw')" id="btn-lang-tw" class="lang-btn active">TW</button>
+          <button type="button" onclick="setLanguage('jp')" id="btn-lang-jp" class="lang-btn active">JP</button>
+          <button type="button" onclick="setLanguage('tw')" id="btn-lang-tw" class="lang-btn">TW</button>
           <button type="button" onclick="setLanguage('en')" id="btn-lang-en" class="lang-btn">EN</button>
         </div>
 
@@ -848,18 +850,18 @@
     <!-- 1. 頂部橫幅背景圖片區 -->
     <section class="banner-frame">
       <div class="banner-inner">
-        <img id="img-banner" class="banner-img" alt="頻道橫幅背景" referrerpolicy="no-referrer" />
+        <img id="img-banner" class="banner-img" alt="明日の太陽ちゃん バナー背景" referrerpolicy="no-referrer" />
       </div>
     </section>
 
-    <!-- 2. 頻道標題與簡介區 (僅顯示目前設定語言標題，不顯示雙語副標) -->
+    <!-- 2. 頻道標題與簡介區 (僅顯示目前設定語言標題) -->
     <section class="channel-info-card">
       <div class="channel-title-row">
-        <h1 id="hero-main-title" class="channel-main-title">明日的小太陽</h1>
+        <h1 id="hero-main-title" class="channel-main-title">明日の太陽ちゃん</h1>
         <span class="channel-handle">@TomorrowsLittleSun1995</span>
       </div>
       <p id="hero-desc" class="channel-desc">
-        用溫暖的色彩與原創音樂陪伴你的日常。點擊下方桌布即可放大預覽並免費下載（僅供個人非商業用途使用）。
+        温かい色彩とオリジナル音楽で、あなたの日常に寄り添います。下の壁紙をクリックすると拡大表示＆無料ダウンロードできます（非商用・個人利用限定）。
       </p>
     </section>
 
@@ -867,7 +869,7 @@
     <section class="clock-bar" aria-label="Date and Time">
       <div class="clock-counter-group">
         <span id="clock-date" class="date-pill">2026.11.15</span>
-        <span id="clock-day" class="day-pill">星期日 SUN</span>
+        <span id="clock-day" class="day-pill">日曜日 SUN</span>
         <div class="time-boxes">
           <span id="clock-hh" class="time-unit">15</span>
           <span class="time-colon">:</span>
@@ -881,7 +883,7 @@
     <!-- 4. 版權桌布下載與標籤搜尋區 -->
     <section id="gallery-section" class="section-Anchor">
       <div class="gallery-header">
-        <h2 id="gallery-heading" class="gallery-title">版權桌布下載</h2>
+        <h2 id="gallery-heading" class="gallery-title">壁紙ダウンロード</h2>
 
         <div class="search-box">
           <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -892,7 +894,7 @@
             type="text"
             id="search-input"
             class="search-input"
-            placeholder="搜尋桌布或標籤 (例如：暖陽、貓咪、郵筒)..."
+            placeholder="キーワードやタグで検索 (例：猫、陽だまり)..."
             oninput="handleSearchInput(this.value)"
           />
           <button type="button" id="clear-search-btn" class="clear-search-btn" onclick="clearSearch()">✕</button>
@@ -905,32 +907,32 @@
 
       <!-- 搜尋無結果提示 -->
       <div id="empty-state" class="empty-state">
-        <p id="empty-text" style="font-weight:700; color:#8C7A6B; margin-bottom:12px;">找不到符合條件的桌布</p>
-        <button type="button" class="filter-pill active" onclick="clearSearch()" id="btn-reset-filter">顯示全部桌布</button>
+        <p id="empty-text" style="font-weight:700; color:#8C7A6B; margin-bottom:12px;">一致する壁紙が見つかりませんでした</p>
+        <button type="button" class="filter-pill active" onclick="clearSearch()" id="btn-reset-filter">すべて表示</button>
       </div>
     </section>
 
     <!-- 5. 版權聲明與非商業使用規範區塊 -->
     <section id="license-section" class="section-Anchor">
       <div class="license-wrapper">
-        <h2 id="license-main-title" class="license-main-heading">版權聲明與非商業使用規範</h2>
+        <h2 id="license-main-title" class="license-main-heading">著作権および非商用利用規約</h2>
 
         <div class="license-grid">
           <!-- 左側：BGM 版權卡片 -->
           <div class="license-card-bgm">
             <div class="license-card-head">
               <span class="icon-badge-amber">♪</span>
-              <h3 id="bgm-card-title" class="license-card-title">頻道原創 BGM 版權與使用聲明</h3>
+              <h3 id="bgm-card-title" class="license-card-title">オリジナルBGM 著作権・利用規約</h3>
             </div>
             <div class="license-inner-box-bgm">
               <p id="bgm-line-1" class="bgm-line-1">
-                本頻道的 BGM 皆為原創作品並擁有完整著作權。非常歡迎分享、轉載，或作為您影片的 BGM 使用！
+                当チャンネルのBGMはすべてオリジナルであり、著作権を有しています。シェアや転載、動画のBGMとしてのご利用は大歓迎です！
               </p>
               <p id="bgm-line-2" class="bgm-line-2">
-                使用時，請務必於資訊欄標註音樂來源（Credit）：「明日の太陽ちゃん (s-t-l)」 (ˊᗜˋ)♪
+                ご使用の際は、概要欄にクレジット（音楽元）の表記をお願いいたします：「明日の太陽ちゃん (s-t-l)」 (ˊᗜˋ)♪
               </p>
               <p id="bgm-line-3" class="bgm-line-3">
-                由衷感謝大家的喜愛與支持 ✦ ✧ ✦ ✧
+                皆様のスキと応援に心より感謝いたします ✦ ✧ ✦ ✧
               </p>
             </div>
           </div>
@@ -939,11 +941,11 @@
           <div class="license-card-wp">
             <div class="license-card-head">
               <span class="icon-badge-sky">✦</span>
-              <h3 id="wp-card-title" class="license-card-title">桌布下載：非商業用途限定</h3>
+              <h3 id="wp-card-title" class="license-card-title">壁紙ダウンロード：非商用利用限定</h3>
             </div>
             <div class="license-inner-box-wp">
               <p id="wp-rule-desc" style="font-weight:500;">
-                本網站提供下載之桌布僅供「非商業用途（個人使用）」。歡迎免費下載並設定為您的個人電腦或行動裝置桌布欣賞。
+                当サイトで配布している壁紙は「非商用利用（個人利用）」限定です。パソコンやスマートフォンの壁紙として無料でダウンロードしてお楽しみいただけます。
               </p>
             </div>
           </div>
@@ -955,7 +957,7 @@
 
   <!-- 簡約頁尾 -->
   <footer class="footer">
-    <p id="footer-copy">© 明日的小太陽 · Non-Commercial Wallpaper Archive</p>
+    <p id="footer-copy">© 明日の太陽ちゃん · Non-Commercial Wallpaper Archive</p>
   </footer>
 
   <!-- 點擊放大預覽與下載視窗 (Lightbox Modal) -->
@@ -971,7 +973,7 @@
         <div class="lightbox-info">
           <div class="lightbox-badges">
             <span class="badge-res">16:9 HD Wallpaper</span>
-            <span id="lightbox-nc-badge" class="badge-nc">非商業用途限定</span>
+            <span id="lightbox-nc-badge" class="badge-nc">非商用のみ</span>
           </div>
           <h3 id="lightbox-title" class="lightbox-title"></h3>
           <p id="lightbox-desc" class="lightbox-desc"></p>
@@ -985,7 +987,7 @@
             class="btn-listen-music"
           >
             <span>♪</span>
-            <span id="lightbox-listen-text">前往頻道聽音樂</span>
+            <span id="lightbox-listen-text">チャンネルで音楽を聴く</span>
           </a>
 
           <a
@@ -996,7 +998,7 @@
             class="btn-download-wp"
           >
             <span>↓</span>
-            <span id="lightbox-download-text">下載高畫質桌布</span>
+            <span id="lightbox-download-text">高画質壁紙をダウンロード</span>
           </a>
         </div>
       </div>
@@ -1004,7 +1006,8 @@
   </div>
 
   <script>
-    var currentLang = 'tw';
+    /* 預設語系改為日文 (jp) */
+    var currentLang = 'jp';
     var activeTag = 'all';
     var currentSearch = '';
     var siteData = null;
@@ -1094,6 +1097,7 @@
 
     var i18n = {
       jp: {
+        pageTitle: '明日の太陽ちゃん - 公式壁紙ダウンロード',
         navBrand: '明日の太陽ちゃん',
         navLicense: '著作権・利用規約',
         navWallpapers: '壁紙ダウンロード',
@@ -1117,6 +1121,7 @@
         days: ['日曜日 SUN', '月曜日 MON', '火曜日 TUE', '水曜日 WED', '木曜日 THU', '金曜日 FRI', '土曜日 SAT']
       },
       tw: {
+        pageTitle: '明日的小太陽 - 桌布下載官網',
         navBrand: '明日的小太陽',
         navLicense: '授權與版權',
         navWallpapers: '版權桌布下載',
@@ -1140,6 +1145,7 @@
         days: ['星期日 SUN', '星期一 MON', '星期二 TUE', '星期三 WED', '星期四 THU', '星期五 FRI', '星期六 SAT']
       },
       en: {
+        pageTitle: "Tomorrow's Little Sun - Official Wallpapers",
         navBrand: "Tomorrow's Little Sun",
         navLicense: 'Terms & Copyright',
         navWallpapers: 'Wallpapers',
@@ -1308,6 +1314,9 @@
     function setLanguage(lang) {
       currentLang = lang;
       var t = i18n[lang];
+
+      document.title = t.pageTitle;
+      document.documentElement.lang = (lang === 'jp') ? 'ja' : (lang === 'tw' ? 'zh-TW' : 'en');
 
       var langs = ['jp', 'tw', 'en'];
       for (var i = 0; i < langs.length; i++) {
