@@ -1,0 +1,82 @@
+{
+  "banner": {
+    "url": "https://drive.google.com/file/d/1Fj2c_0abPhDmAeZdoA8e7MFqXuilzG7D/view?usp=sharing"
+  },
+  "tags": {
+    "all":      { "jp": "すべて",      "tw": "全部",      "en": "All" },
+    "sunlight": { "jp": "#陽だまり",   "tw": "#暖陽",     "en": "#Sunlight" },
+    "corner":   { "jp": "#街角",       "tw": "#街角",     "en": "#StreetCorner" },
+    "postbox":  { "jp": "#ポスト",     "tw": "#郵筒",     "en": "#Postbox" },
+    "stroll":   { "jp": "#お散歩",     "tw": "#散步",     "en": "#Stroll" },
+    "cat":      { "jp": "#猫",         "tw": "#貓咪",     "en": "#Cat" },
+    "petshop":  { "jp": "#お店先",     "tw": "#小店",     "en": "#Shopfront" },
+    "cafe":     { "jp": "#カフェ",     "tw": "#咖啡廳",   "en": "#Cafe" },
+    "lunch":    { "jp": "#ランチ",     "tw": "#午間時光", "en": "#Lunchtime" }
+  },
+  "wallpapers": [
+    {
+      "id": "S1",
+      "url": "https://drive.google.com/file/d/1RwCjKRu1G5Rwvf94nLqyORE_9KA6a8Ao/view?usp=sharing",
+      "downloadName": "01_街角の陽だまり.png",
+      "tags": ["sunlight", "corner"],
+      "title": {
+        "jp": "街角の陽だまり",
+        "tw": "街角的暖陽",
+        "en": "Sunny Street Corner"
+      },
+      "desc": {
+        "jp": "晴れた青空と緑の並木道、道端で微笑む穏やかな午後",
+        "tw": "晴朗藍天與綠意街道旁，蹲坐在路邊微笑的溫柔午後",
+        "en": "A gentle afternoon crouching with a warm smile by the sunny green street"
+      }
+    },
+    {
+      "id": "S2",
+      "url": "https://drive.google.com/file/d/1fE95CxYMOrW8IQ6tptj2Pw7cGoffGJ2g/view?usp=sharing",
+      "downloadName": "02_ポストに託した思い.png",
+      "tags": ["postbox", "stroll", "sunlight"],
+      "title": {
+        "jp": "ポストに託した思い",
+        "tw": "寄託於郵筒的心意",
+        "en": "Wishes Entrusted to the Postbox"
+      },
+      "desc": {
+        "jp": "木漏れ日の坂道、赤いポストのそばで思いを届ける穏やかな時間",
+        "tw": "樹影搖曳的午後坡道，在紅色郵筒旁寄託溫柔心意的片刻",
+        "en": "A peaceful moment beside a red postbox along a sunlit slope"
+      }
+    },
+    {
+      "id": "S3",
+      "url": "https://drive.google.com/file/d/1eZVJABsZOF8EjGvM7I2s_-WjKLdsvPK2/view?usp=sharing",
+      "downloadName": "03_ペットショップの隣の住人.png",
+      "tags": ["cat", "petshop", "corner"],
+      "title": {
+        "jp": "ペットショップの隣の住人",
+        "tw": "寵物店隔壁的住客",
+        "en": "Neighbor Next to the Pet Shop"
+      },
+      "desc": {
+        "jp": "カラフルな店先で、気持ちよさそうに眠る猫を見つめる優しい時間",
+        "tw": "在繽紛的小店旁駐足，低頭凝視熟睡小貓的可愛瞬間",
+        "en": "Pausing beside a colorful shopfront to watch a peacefully sleeping cat"
+      }
+    },
+    {
+      "id": "S4",
+      "url": "https://drive.google.com/file/d/1Y9U-tG0bx_VZKJwRvg5UpVD37C3fZRMp/view?usp=sharing",
+      "downloadName": "04_カフェのランチタイムのおすすめ.png",
+      "tags": ["cafe", "lunch", "sunlight"],
+      "title": {
+        "jp": "カフェのランチタイムのおすすめ",
+        "tw": "咖啡廳午間時光的推薦",
+        "en": "Cafe Lunchtime Recommendation"
+      },
+      "desc": {
+        "jp": "レンガ造りのカフェと赤い自転車、振り返る笑顔が輝くランチタイム",
+        "tw": "溫暖磚牆咖啡廳與紅色單車旁，回眸微笑的金黃色午間時光",
+        "en": "Looking back with a bright smile beside a brick cafe during lunchtime"
+      }
+    }
+  ]
+}
