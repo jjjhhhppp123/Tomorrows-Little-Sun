@@ -171,7 +171,7 @@
       display: block;
     }
 
-    /* 2. 頻道標題與簡介卡片 */
+    /* 2. 頻道標題與簡介卡片 (僅顯示當前設定語言標題) */
     .channel-info-card {
       background-color: #FFFFFF;
       border: 2px solid #F5E6C8;
@@ -183,7 +183,7 @@
     .channel-title-row {
       display: flex;
       flex-wrap: wrap;
-      align-items: baseline;
+      align-items: center;
       gap: 12px;
       margin-bottom: 8px;
     }
@@ -193,12 +193,6 @@
       font-weight: 900;
       color: #4A3B32;
       letter-spacing: 0.02em;
-    }
-
-    .channel-sub-name {
-      font-size: 17px;
-      font-weight: 800;
-      color: #D97724;
     }
 
     .channel-handle {
@@ -795,15 +789,13 @@
 </head>
 <body>
 
-  <!-- 筆記本正方格狀底圖風格 (移除原本的曲線與圓圈，改為純色正方格紋) -->
+  <!-- 筆記本正方格狀底圖風格 -->
   <div class="bg-notebook-grid" aria-hidden="true">
     <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
       <defs>
-        <!-- 24px 細方格 -->
         <pattern id="notebook-small-grid" width="24" height="24" patternUnits="userSpaceOnUse">
           <path d="M 24 0 L 0 0 0 24" fill="none" stroke="#F3E5AB" stroke-width="1" />
         </pattern>
-        <!-- 120px 主方格 (每 5x5 小格構成一個大格，如同日系方格筆記本) -->
         <pattern id="notebook-major-grid" width="120" height="120" patternUnits="userSpaceOnUse">
           <rect width="120" height="120" fill="url(#notebook-small-grid)" />
           <path d="M 120 0 L 0 0 0 120" fill="none" stroke="#E8D292" stroke-width="1.5" />
@@ -856,15 +848,14 @@
     <!-- 1. 頂部橫幅背景圖片區 -->
     <section class="banner-frame">
       <div class="banner-inner">
-        <img id="img-banner" class="banner-img" alt="明日的小太陽 頻道橫幅背景" referrerpolicy="no-referrer" />
+        <img id="img-banner" class="banner-img" alt="頻道橫幅背景" referrerpolicy="no-referrer" />
       </div>
     </section>
 
-    <!-- 2. 頻道標題與簡介區 -->
+    <!-- 2. 頻道標題與簡介區 (僅顯示目前設定語言標題，不顯示雙語副標) -->
     <section class="channel-info-card">
       <div class="channel-title-row">
         <h1 id="hero-main-title" class="channel-main-title">明日的小太陽</h1>
-        <span id="hero-sub-name" class="channel-sub-name">明日の小太陽ちゃん</span>
         <span class="channel-handle">@TomorrowsLittleSun1995</span>
       </div>
       <p id="hero-desc" class="channel-desc">
@@ -964,7 +955,7 @@
 
   <!-- 簡約頁尾 -->
   <footer class="footer">
-    <p>© 明日的小太陽 / 明日の小太陽ちゃん · Non-Commercial Wallpaper Archive</p>
+    <p id="footer-copy">© 明日的小太陽 · Non-Commercial Wallpaper Archive</p>
   </footer>
 
   <!-- 點擊放大預覽與下載視窗 (Lightbox Modal) -->
@@ -1103,11 +1094,10 @@
 
     var i18n = {
       jp: {
-        navBrand: '明日の小太陽ちゃん',
+        navBrand: '明日の太陽ちゃん',
         navLicense: '著作権・利用規約',
         navWallpapers: '壁紙ダウンロード',
-        heroMain: '明日の小太陽ちゃん',
-        heroSub: '明日的小太陽',
+        heroMain: '明日の太陽ちゃん',
         heroDesc: '温かい色彩とオリジナル音楽で、あなたの日常に寄り添います。下の壁紙をクリックすると拡大表示＆無料ダウンロードできます（非商用・個人利用限定）。',
         galleryHeading: '壁紙ダウンロード',
         searchPlaceholder: 'キーワードやタグで検索 (例：猫、陽だまり)...',
@@ -1123,6 +1113,7 @@
         bgmLine3: '皆様のスキと応援に心より感謝いたします ✦ ✧ ✦ ✧',
         wpCardTitle: '壁紙ダウンロード：非商用利用限定',
         wpRuleDesc: '当サイトで配布している壁紙は「非商用利用（個人利用）」限定です。パソコンやスマートフォンの壁紙として無料でダウンロードしてお楽しみいただけます。',
+        footerCopy: '© 明日の太陽ちゃん · Non-Commercial Wallpaper Archive',
         days: ['日曜日 SUN', '月曜日 MON', '火曜日 TUE', '水曜日 WED', '木曜日 THU', '金曜日 FRI', '土曜日 SAT']
       },
       tw: {
@@ -1130,7 +1121,6 @@
         navLicense: '授權與版權',
         navWallpapers: '版權桌布下載',
         heroMain: '明日的小太陽',
-        heroSub: '明日の小太陽ちゃん',
         heroDesc: '用溫暖的色彩與原創音樂陪伴你的日常。點擊下方桌布即可放大預覽並免費下載（僅供個人非商業用途使用）。',
         galleryHeading: '版權桌布下載',
         searchPlaceholder: '搜尋桌布或標籤 (例如：暖陽、貓咪、郵筒)...',
@@ -1146,6 +1136,7 @@
         bgmLine3: '由衷感謝大家的喜愛與支持 ✦ ✧ ✦ ✧',
         wpCardTitle: '桌布下載：非商業用途限定',
         wpRuleDesc: '本網站提供下載之桌布僅供「非商業用途（個人使用）」。歡迎免費下載並設定為您的個人電腦或行動裝置桌布欣賞。',
+        footerCopy: '© 明日的小太陽 · Non-Commercial Wallpaper Archive',
         days: ['星期日 SUN', '星期一 MON', '星期二 TUE', '星期三 WED', '星期四 THU', '星期五 FRI', '星期六 SAT']
       },
       en: {
@@ -1153,7 +1144,6 @@
         navLicense: 'Terms & Copyright',
         navWallpapers: 'Wallpapers',
         heroMain: "Tomorrow's Little Sun",
-        heroSub: '明日の小太陽ちゃん',
         heroDesc: 'Accompanying your daily life with warm colors and original BGM. Click any wallpaper below to preview and download for free (Personal & Non-Commercial Use Only).',
         galleryHeading: 'Wallpaper Download',
         searchPlaceholder: 'Search wallpapers or tags (e.g. Cat, Sunlight)...',
@@ -1169,6 +1159,7 @@
         bgmLine3: 'Thank you from the bottom of our hearts for your love and support ✦ ✧ ✦ ✧',
         wpCardTitle: 'Wallpapers: Non-Commercial Use Only',
         wpRuleDesc: 'Wallpapers available on this website are strictly for Non-Commercial (Personal) Use Only. Feel free to download and enjoy them as your desktop or mobile background.',
+        footerCopy: "© Tomorrow's Little Sun · Non-Commercial Wallpaper Archive",
         days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
       }
     };
@@ -1329,7 +1320,6 @@
       document.getElementById('nav-link-license').textContent = t.navLicense;
       document.getElementById('nav-link-wallpapers').textContent = t.navWallpapers;
       document.getElementById('hero-main-title').textContent = t.heroMain;
-      document.getElementById('hero-sub-name').textContent = t.heroSub;
       document.getElementById('hero-desc').textContent = t.heroDesc;
       document.getElementById('gallery-heading').textContent = t.galleryHeading;
       document.getElementById('search-input').placeholder = t.searchPlaceholder;
@@ -1343,6 +1333,7 @@
       document.getElementById('bgm-line-3').textContent = t.bgmLine3;
       document.getElementById('wp-card-title').textContent = t.wpCardTitle;
       document.getElementById('wp-rule-desc').textContent = t.wpRuleDesc;
+      document.getElementById('footer-copy').textContent = t.footerCopy;
 
       document.getElementById('lightbox-nc-badge').textContent = t.nonCommercialBadge;
       document.getElementById('lightbox-listen-text').textContent = t.listenBtn;
